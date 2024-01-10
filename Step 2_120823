@@ -1,0 +1,303 @@
+# 하나의 값을 변수에 넣을때
+num_1 , num_2 = 1,2
+print(num_1)
+print(num_2)
+
+print(num_1, num_2)
+
+
+# 변수를 사용하지 않을때
+# 이전에 계산된 결과를 저장할 . 수있는 방법이 없음
+1+2+3+4
+1+2+3
+1+2
+
+# 변수를 사용할떄
+# 이전에 계ㅏㄴ된 결과를 저장해서 사용할 수 있음
+sum = 1+2
+sum = sum + 3
+sum = sum + 4
+
+### 변수에 값을 넣는 것-> 할당
+
+# sum = 1+2 -> 1+2 의 계산된 결과를 sum이라는 벼누에 할당한다
+# sum 변수명이고 "=" 같다는 의미가 아니라 할당(assignment)라고 합니다.
+# "=" 할당 연산자
+# "+" 산술 연산자
+# "+= " 산술 후 바로 할당하는 문법
+# /=, -=, *= 모두 가능합니다.
+
+sum = 1+2
+sum = sum + 3
+sum = sum + 4
+
+print(sum)
+
+sum2= 1+2
+sum2 +=3
+sum2 +=4
+sum2 +=5
+
+print(sum2) # 주의! 선언되지 않은 변수를 사용할 경우 에러 발생
+
+# 변수에 어떤값도 넣고 싶지 않고 선언하는 방법
+
+nothing = None
+print(None)
+
+
+
+
+# 대소문자를 구분하는 변수
+BIG = "크다"
+big = "작다"
+
+print(BIG , big)
+
+# 그네이크케이스(snake case) 변수 규칙
+# 변수명 : snake_case _<- 뱁
+
+# 카멜테이스(camel case)
+# 변수명 : camelCase <- 낙타
+# 우리는 변수를 만들때 스네이크케이스로 진행합니다. 그리고 언더바는 2개를 적용시켜주세요
+# 개발에 관련되 ㄴ여러조건을 명시하는 것들을 코드 컨벤션이라고 합니다
+
+box__shose = "스니커즈"
+box__hat = "슈프림 모자"
+
+print(box__shose)
+print(box__hat)
+
+
+
+
+# print() 포메팅 3가지 f-string : print(f '{변수명}')
+
+me = "파머"
+print(f'{me}만 빼고 다있어')
+
+
+# 붕어빵 철이 돌아왔죠
+# 붕어빵(팡) : 2000원, 붕어빵(슈프림) :2500원, 붕어빵(잡채) : 3000원
+# 무인 주문기계를 만들어주세요
+# 붕어빵(잡채)3개, 붕어빵(슈크림)2개를 주문하면
+# "주문이 완료되었습니다. 붕어빵(슈크림)2개, 붕어빵(잡채)3개 총 5개 결제 금액은 14000원 입니다."
+# 이 출력되도록 코드를 작성해 주세요
+# 변수를 만들때 스네이크 케이스에 언더바는 2개/ print()문의 포메팅 f-string
+
+fish__r, fish__s, fish__j = "붕어빵(팥)", "붕어빵(슈크림)", "붕어빵(잡채)"
+fish__r_pay, fish__s__pay, fish__j__pay = 2000, 2500, 3000
+order_s, order_j = 2, 3
+
+order_s__pay, order_j__pay = fish__s__pay * order_s, fish__j__pay * order_j
+sum = order_s + order_j
+sum_pay = order_s__pay + order_j__pay
+
+print(f'주문이 완료되었습니다. {fish__s} {order_s}개, {fish__j} {order_j}개, 총{sum} 개 결재금액은 {sum_pay} 입니다.')
+
+
+#02-06
+#1. int(integer): 정수
+#2. float(float): 실수
+#3. str(string):문자
+#4. bool(bool, boolean) :참 또는 거짓, true 또는 false 1또는 0
+
+#5. list
+#6. tuple
+#7, dict
+#8. set
+
+box_num = "하나"
+type(box_num)
+
+print(float(5))
+print(int(5.0))
+
+나이= 10
+type(나이)
+print(dir(나이))
+
+print(나이 .bit_length())
+print(bin(나이))
+
+이름 = "김오즈"
+나이 = 30
+키= 180.3
+소속 = "s매직 서울 북부"
+print(type(이름))
+print(type(나이))
+print(type(키))
+print(type(소속))
+
+print(float(5))
+print(int(5.0))
+print("5","5.0")
+print(type("5"), type("5.0"))
+
+str :문자열
+특징 : 시퀀스 자료형
+시퀀스란? 요소들이 연속적으로 이어진 자료형
+값 하나하나를 요소라고 합니다.
+#0 index
+print(소속)
+print(소속[0])
+print(소속[1])
+print(소속[2])
+print(소속[3])
+print(소속[4])
+print(소속[5])
+print(소속[6])
+print(소속[7])
+
+"매" in 소속
+"3" in 소속
+
+# 문자열 즉 시퀀스 끼리 합치기
+"13" + "금요일"
+
+# 복사가 가능
+옛날게임 = "바니바니 당근당근" * 20
+print(옛날게임)
+
+len(옛날게임)
+
+
+퀴즈 = "차 4대가 고장나면? 카포에라"
+print(퀴즈[12:16])
+print(퀴즈[12:15])
+
+퀴즈[15]
+퀴즈[-1]
+
+생년월일="2000.02.19"
+년 = 생년월일[0:4]
+월 = 생년월일[5:7]
+일 = 생년월일[8:10]
+
+print(f'{년}, {월}, {일}')
+
+숫자 = "123456789"
+#전체 출력
+print(숫자[::])
+
+#전체 뒤부터 출력
+print(숫자[::-1])
+
+# 첫번째 인덱스 기준으로 2카닉 띄어쓰기 출력
+print(숫자[::2])
+
+# 첫번째 인덱스 기준으로 2칸씩 ㅋ듸어쓰기 출력하기
+print(숫자[4:1:-1])
+print(숫자[1:4])
+
+퀴즈 = "스님이 공중에 뜬다를 4글자로 말하면? 어중이떠중이"
+print(퀴즈[22:28])
+
+과일 = "apple"
+과일.count("p")
+
+int(3.5)
+type(7.0)
+float(5)
+
+우영우="기러기토마토스위스역삼역"
+print(우영우[11::-1])
+
+# bool의 쇼타임
+# 주의할점 True x true False x False
+# 부등호
+3>1
+3==1
+3==3
+
+20 != 5
+20 != 20
+
+
+# 문자열 비교
+"python" == "Python"
+"Python"== "Python"
+"Python" != "Python"
+"Python"!= "python"
+
+# 중요
+# ==, is
+
+3 is 3
+3 ==3
+
+3.0 is 3
+3.0 == 3
+
+8==2*4
+4!=2+2
+2*3 is 3+3
+8 is 4*4.0
+5 is 6-1.1
+x=10
+y=20
+not y !=20 and x>5
+
+"치맥" and True
+
+# 본격적인 놀리연산자
+# True : 1 / False : 0
+
+True and True # 1 True
+
+True and False  # 1*0=0 False
+False and True # 0*1 = 0 False
+False and False # 0*0= 0 False
+
+True or True # 1+1=1 True
+
+True or False  # 1+0=0 True
+False or True # 0+1 = 0 True
+False or False # 0+0= 0 False
+
+
+# 점점 복잡
+
+10 ==12 or 6!=2 #true
+2>5 and 7==7 # False
+not 14 <= 15 #False
+not 7 is  7.0 #True
+
+# 문자영?? True?
+
+bool("힘들어요")
+
+# 굉장히 중요
+# 단락 평가
+print(False and True)
+print(False and "힘들어요") #0과 1
+
+print(True and False)
+
+print(False or "힘들어요") # 0+1 1
+print(True and "힘들어요")
+
+
+# 과제
+게임 = "홀짝홀짝홀짝"
+print(게임[::2])
+
+#
+전화번호 = "010-1234-5678"
+f = 전화번호[0:3]
+s = 전화번호[4:8]
+c = 전화번호[9:13]
+
+print(f'{f}{s}{c}')
+
+# 
+prof__p , crea__p, mark__p, safe__p = 66, 62, 71, 68
+
+#print(prof__p >= 60 and (crea__p>=50 and mark__p >= 50) and ((prof__p + mark__p)/2 >= safe__p))
+#print(prof__p >= 60)
+print((prof__p >= 60) and ((crea__p>=50) and (mark__p >= 50)) and ((prof__p + mark__p)/2 >= safe__p))
+
+
+
+
+
